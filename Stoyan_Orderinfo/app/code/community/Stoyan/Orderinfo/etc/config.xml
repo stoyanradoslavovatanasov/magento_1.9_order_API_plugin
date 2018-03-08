@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Stoyan_Orderinfo>
+            <version>1.0.0</version>
+        </Stoyan_Orderinfo>
+    </modules>
+    <global>
+        <models>
+            <Stoyan_orderinfo>
+                <class>Stoyan Orderinfo</class>
+            </Stoyan_orderinfo>
+        </models>
+		<events>
+        <sales_order_save_after>
+            <observers>
+                <Stoyan_orderinfo>
+                    <type>singleton</type>
+                    <class>Stoyan_Orderinfo_Model_Observer</class>
+                    <method>ImplementOrderStatus</method>
+                </Stoyan_orderinfo>
+            </observers>
+        </sales_order_save_after>
+		</events>
+    </global>
+    <default>
+        <tab1>
+            <general>
+                <text_field>http://www.domain.com/api/index.php</text_field>
+                <active>0</active>
+            </general>
+        </tab1>
+    </default>
+</config>

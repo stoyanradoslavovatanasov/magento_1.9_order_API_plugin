@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Stoyan_Orderinfo>
+            <codePool>community</codePool>
+            <active>true</active>
+        </Stoyan_Orderinfo>
+    </modules>
+</config>
